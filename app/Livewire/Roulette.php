@@ -42,7 +42,7 @@ class Roulette extends Component
     {
         $this->gameover = false;
         $this->winPrize = false;
-        $this->num = 1;
+        $this->num = rand(1,9);
         $this->coin = Auth::user()->coin ?? 0;
         $this->prize = Prize::inRandomOrder()->first();
     }

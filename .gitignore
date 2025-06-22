@@ -22,5 +22,5 @@ yarn-error.log
 /.vscode
 /.zed
 /storage/*.index
-public/video/videoplayback.mp4
+public/videoplayback.mp4
 google-credential.json

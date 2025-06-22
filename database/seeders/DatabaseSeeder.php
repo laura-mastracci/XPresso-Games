@@ -56,7 +56,10 @@ class DatabaseSeeder extends Seeder
             ]);
         }
         $this->call([
-            DiscountSeeder::class,
+            UserSeeder::class,
+            ArticleSeeder::class,
+            DiscountSeeder::class
+            
         ]);
     }
 }

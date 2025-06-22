@@ -1,61 +1,41 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# XPresso Games
+A videogame e-commerce platform with striking neon visuals and retro-gaming aesthetics.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project was developed during an Aulab course, in collaboration with my teammates Luigi, Matteo, and Lorenzo.  
+Check out our LinkedIn profiles: [Laura](https://www.linkedin.com/in/laura-mastracci-dev/), [Luigi](https://www.linkedin.com/in/luigi-delber-v-341083286/), [Matteo](https://www.linkedin.com/in/matteo-brivio-web-developer/), [Lorenzo](https://www.linkedin.com/in/lorenzo-miglietta-developer/).
 
-## About Laravel
+## Features
+- User authentication powered by Laravel Fortify.
+- Image analysis using Google API Vision (Google Vision Label Image, Google Vision Safe Search, Remove Faces and Resize Image).
+- Full CRUD functionality for games from your personal dashboard.
+- Apply to become a *revisor* and moderate games submitted by other users — you can even change your decisions later!
+- Browse the shop using cumulative filters or search games with the full-text search bar in the navbar. You can also browse them by category using the coolest animated buttons in the homepage! 
+- Add your favourite games to the wishlist and check out the most popular games in the homepage.
+- Still not sure what to buy? Ask our **XP-Bot** — your AI companion for tailored game suggestions.
+- Each game's detail page includes a description, user reviews, and similar game recommendations.
+- Test your luck with our **coin roulette** — win discounts for your next purchase!
+- Add games to your cart and proceed to checkout. Use coupons and earn coins as you go!
+- After a sandboxed payment, you'll receive an email with a link to play your new game.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## How to start the project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Clone this repository using ```git clone``` command followed by the repository's URL.
+2. Open the project navigating into the correct folder using ```cd <repository-name>``` and ```code .``` to open it using VS Code.
+3. Create your .env file, using ```cp .env.example .env```.
+4. Generate your key using ```php artisan key:generate```.
+5. Create your MySQL database and connect it in your .env file.
+6. Execute ```php artisan migrate --seed```command. This will populate your DB with premade content and users (You can login using admin@example.com and 'password', or register again with your preferred credentials).
+7. Install all the necessary packages using ```npm i``` and ```composer i```.
+8. Start your server using ```composer run dev```.
+9. Enjoy!
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+NB: To enable full functionality (chatbot, mail, payments, image analysis), set up the following services:
+* **OpenAI**: for XP-Bot - [get your API key](https://openai.com/api/).
+* **Stripe**: for payments - [Stripe Docs](https://docs.stripe.com/api).
+* **Mail**: e.g. [MailTrap](https://mailtrap.io/).
+* **Google Vision**:
+    - Place your credentials file as ```google-credential.json``` in the project root.
+    - Set the environment variable in .env accordingly.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ***If you don't configure Google Vision, the system will gracefully fallback using a default static image.***
