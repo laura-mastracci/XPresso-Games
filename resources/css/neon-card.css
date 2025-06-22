@@ -1,0 +1,160 @@
+/* body {
+    background-color: #1c1f2b;
+} */
+.neon{
+    margin: 0 auto;
+    /* padding: 2em;
+    width: 200px; Larghezza personalizzabile */
+    background: #212121;
+    text-align: center;
+    border-radius: 6px;
+    color: aliceblue;
+    position: relative;
+    /* z-index: 1; */
+
+        /* test di prova  */
+    border: 1px solid rgba(255, 255, 255, .5);
+    
+   
+}
+
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.neon::after, .neon::before {
+    
+    content: '';
+    position: absolute;
+    height: calc(100% + 10px); /* Aumenta dimensione per creare margine */
+    width: calc(100% + 10px); /* Lo stesso per larghezza */
+    /* background-image: conic-gradient(from var(--angle),#ff4545,#00ff99,#006aff,#ff0095,#ff4545);  */
+    background-image: conic-gradient(from var(--angle),#ff0095,transparent, #8fffd2, #ff0095); 
+    /* background-image: conic-gradient(transparent,rgb(0, 255, 174));  */
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 1s ease;
+     /* animation: 3s spin linear infinite;  */
+} 
+
+.neon::before { 
+    /* OPACITA' DI SFONDO */
+  filter: blur(1.5rem);
+    opacity: 0.8; 
+
+
+ }
+
+
+.neon:hover::after, .neon:hover::before {
+    animation: 3s spin linear infinite;
+    opacity: 1;
+    
+    
+}
+
+.delete-btn {
+    color: #ff0095;
+    
+  }
+
+.edit-btn {
+    color: #8fffd2;
+    
+  }
+
+  .edit-form{
+    color: #ff0095 !important;
+  }
+
+
+        /* CARD CATEGORY  */
+
+
+        .category-card {
+            /* width: 280px; */
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden; /* Assicura che i contenuti non straripino */
+            border: 2px solid white;
+            position: relative;
+        }
+        
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Adatta l'immagine al contenitore */
+            display: block; /* Rimuove eventuali margini indesiderati */
+        }
+        
+        .category-body {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: -100%; /* Nasconde il contenitore */
+            position: absolute;
+            background: #4288a031; /* Sfocatura per l'effetto di trasparenza */
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+            color: white;
+            padding: 0; /* Rimuove il padding per centrare meglio gli elementi */
+            display: flex; /* Garantisce che i contenuti siano centrati */
+            flex-direction: column; /* Posiziona gli elementi verticalmente */
+            justify-content: center; /* Centra verticalmente */
+            align-items: center; /* Centra orizzontalmente */
+            transition: 0.8s; /* Effetto di transizione */
+        }
+        
+        .category-card:hover .category-body {
+            right: 0; /* Mostra il contenitore */
+        }
+        
+        .title-category {
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center; /* Centra il testo */
+        }
+        
+        .btn-category {
+            background: whitesmoke;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            width: 80px;
+            cursor: pointer;
+            text-align: center; /* Centra il testo */
+        }
+
+    .category-overlay{
+        z-index: 2;
+        font-size: 40px;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    
+    
+    .category-card:hover .category-overlay {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+

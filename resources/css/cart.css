@@ -1,0 +1,77 @@
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.pink-btn{
+    color: #ff0095;
+    background-color: transparent;
+    border: none;
+    padding: 2px;;
+}
+
+body{
+    overflow-x: hidden;
+}
+.cart{
+
+    position: absolute;
+    top: calc(100px);
+    width: 30%;
+    height: 50vh;
+    padding: 8px;
+    border-radius: 8px 0 0 8px;
+    border: 3px solid #ff0095;
+    border-right: 0px;
+    background: #212121;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-color: #ff0095 #3f3a3d92;
+    right: calc(-15%);
+    scroll-behavior: auto;
+    transition: right 0.5s ease-in-out;
+    
+}
+
+
+.cart.open {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 1000;
+}
+
+.show-checkout .chk-btn {
+    display: block !important; /* Sovrascrive d-none */
+}
+
+.close{
+    right: calc(-30%);
+    position: fixed;
+    top: 100px;
+    z-index: 1000;
+}
+.anch {
+    display: block; /* Fa sì che il <a> occupi tutto lo spazio del bottone */
+    width: 100%;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .cart{
+        width: 60%;
+    }
+
+
+
+    .close{
+        position: fixed;
+        top: 100px;
+        z-index: 1;
+        right: calc(-60%);
+    }
+}

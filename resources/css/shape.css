@@ -1,0 +1,99 @@
+.shape-wrap{
+    background-color: #212121 !important;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .wrap-bg {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+  }
+  
+  .bg-shape {
+    width: 400px;
+    height: 400px;
+    border-radius: 99%;
+    position: absolute;
+    opacity: 0.6;
+    filter: blur(60px);
+    mix-blend-mode: screen;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-iteration-count: infinite;
+  }
+  
+  /* Shape 1 */
+  .bg-shape1 {
+    background: linear-gradient(135deg, #FF0072, #FF0072);
+    animation-name: moveOne, rotate, pulse;
+    animation-duration: 10s, 8s, 3s;
+    animation-delay: 0s, 0s, 0s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55), linear, ease-in-out;
+    filter: blur(60px) drop-shadow(0 0 60px #FF0072);
+  }
+  
+  /* Shape 2 */
+  .bg-shape2 {
+    background: linear-gradient(135deg, #8fffd2, #8fffd2);
+    animation-name: moveTwo, rotate, pulse;
+    animation-duration: 10s, 12s, 4s;
+    animation-delay: 2s, 0s, 1s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55), linear, ease-in-out;
+    filter: blur(20px) drop-shadow(0 0 40px #8fffd2);
+    mix-blend-mode: lighten;
+  }
+  
+  /* Shape 3 */
+  .bg-shape3 {
+    background: linear-gradient(135deg, #FF0072, #FF0072);
+    animation-name: moveThree, rotateReverse, pulse;
+    animation-duration: 12s, 10s, 3.5s;
+    animation-delay: 1s, 0s, 0.5s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55), linear, ease-in-out;
+    filter: blur(70px) drop-shadow(0 0 70px #FF0072);
+    mix-blend-mode: screen;
+  }
+  
+  /* Animazioni movimento: partono dal centro (0,0), si allontanano, poi tornano */
+  @keyframes moveOne {
+    0%, 100% { top: 0; left: 0; }
+    50% { top: 150px; left: -100px; }
+  }
+  
+  @keyframes moveTwo {
+    0%, 100% { top: 0; left: 0; }
+    50% { top: 150px; left: 100px; }
+  }
+  
+  @keyframes moveThree {
+    0%, 100% { top: 0; left: 0; }
+    50% { top: -100px; left: 0; }
+  }
+  
+  /* Rotazioni */
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes rotateReverse {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* Pulsazione */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  

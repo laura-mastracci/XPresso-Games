@@ -1,0 +1,21 @@
+.full-chart .close-btn{
+    visibility: hidden;
+ }
+
+ 
+
+.full-chart .chart {
+    visibility: hidden;
+ }
+
+ .full-chart .fnt-cstm{
+    font-size: 1.6rem;
+ }
+
+ .full-chart .button-box {
+    display: flex;
+    justify-content: end !important;
+    position: relative;
+    top: -40%;
+    
+}

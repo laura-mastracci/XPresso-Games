@@ -1,0 +1,78 @@
+.band .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 27, 27);
+}
+
+.face{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Name {
+    font-family: 'Pixelify Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding:0px;
+
+}
+
+.logoAulab{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://scontent-mxp1-1.xx.fbcdn.net/v/t1.6435-9/72108875_1059829764187243_8842735327660474368_n.png?_nc_cat=102&ccb=1-7&_nc_sid=2285d6&_nc_ohc=_FGDkYRr3yAQ7kNvwF0C5m-&_nc_oc=AdlqYNIlaBqxZvAMRzOosaahf7bzb1xT3oln3kCU3gzu0liwzT0hgjrv1_kPA4kOLmE&_nc_zt=23&_nc_ht=scontent-mxp1-1.xx&_nc_gid=0Ofef9Jf8lvHQuQwrf-xdA&oh=00_AfIL5xgzLY2fjvzmcJu7smGx7b-ZsX2WHqQbtawGyVx2gA&oe=684D8AE8);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.lorenzo{
+    background-image: url(../img/lorenzo.jpg);
+    border: 3px solid #ff0095;
+    
+}
+.luigi{
+    background-image: url(../img/luigi.jpeg);
+    border: 3px solid #ff0095;
+    
+}
+.matteo{
+    background-image: url(../img/matteo.jpg);
+    border: 3px solid #ff0095;
+}
+.laura{
+    background-image: url(../img/laura.jpeg);
+     border: 3px solid #ff0095;
+}
+
+.linkedin{
+    text-decoration: none !important;
+    color: #ff0095;
+}
+
+.linkedin:hover{
+    color: #FFD700;
+    transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.face:hover {
+    border: 2px solid gold;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.homecontainer{
+
+    justify-content: center !important;
+    align-items: center !important;
+}

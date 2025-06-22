@@ -1,0 +1,129 @@
+.cardct{
+    width: 400px;
+    height: 200px;
+    padding: 0 36px;
+    perspective: 2500px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 30px;
+    
+}
+
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.wrapperct{
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background: black;
+    border-radius: 30px;
+    overflow: hidden;
+     /* box-shadow: rgba(0, 0, 0, 0.719) 0px 14px 28px, rgba(0, 0, 0, 0.678) 0px 10px 10px; */
+}
+
+.wrapperct img {
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 10px 10px;
+}
+
+.cardct:hover .wrapperct{
+    transform: perspective(900px) translateY(-5%) rotateX('25deg')
+    translateZ(0);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+.wrapperct::before,
+.wrapperct::after{
+    content: '';
+    position: absolute;
+    
+    left: 0;
+    width: 100%;
+    height: 80px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.wrapperct::before{
+    top: 0;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+.wrapperct::after{
+   bottom: 0;
+   opacity: 1;
+   
+   /* background: linear-gradient(to bottom, #000, transparent); */
+    
+}
+
+.cardct:hover .wrapperct::after,
+ .wrapper::before{
+    opacity: 1;
+}
+
+.cardct:hover .wrapperct::after{
+    height: 180px;
+    
+}
+
+.title{
+    width: 100%;
+    transition: transform 0.5s;
+    right: 24%;
+    top: 90%;
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: aliceblue;
+    
+}
+.fight{
+    width: 100%;
+    transition: transform 0.5s;
+    right: 24%;
+    top: 90%;
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: aliceblue;
+    
+}
+
+.cardct:hover .title{
+    transform: translate3d(0, -70px, 0) ;
+}
+
+.cardct:hover .cover-image{
+    opacity: 0.3;
+}
+
+.character{
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    filter: drop-shadow(2px 2px 2px black);
+    position: absolute;
+    z-index: -1;
+}
+
+.cardct:hover .character{
+    opacity: 1;
+    transform: translate3d(5%, -20%, 670px);
+}
+

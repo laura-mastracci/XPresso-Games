@@ -1,0 +1,296 @@
+.navbar-brand, h1 {
+    font-family: 'Jersey 10';
+    font-size: 3rem;
+    color: aliceblue !important;
+    
+}
+
+.navbar {
+    padding: 0px;
+    background-color: #212121 !important;
+}
+
+.logo-title {
+    font-size: 3rem !important;
+    color: white !important;
+    text-decoration: none;
+    cursor:pointer;
+
+}
+
+.logo{
+   width: 2.2rem !important;
+   padding-bottom: 4px;
+}
+
+
+.burger {
+    color: aliceblue !important;
+}
+
+.link-menu {
+    margin-left: -20px; /* Sposta leggermente a sinistra */
+}
+
+
+
+.nav-link-wrap {
+    margin-left: 50%;
+}
+
+.navbar-toggler {
+    color: white; /* Cambia il colore dell'icona del menu burger */
+    border-color: white; /* Cambia il colore del bordo, se presente */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    /* L'icona del menu burger diventa bianca */
+}
+
+.nav-link {
+    font-size: 24px;
+    margin-left: 1rem;
+    transition: transform 4s ease-in; 
+}
+
+.nav-link:hover {
+    transform: scale(1.30); 
+}
+
+.user{
+    text-decoration: none;
+    
+}
+
+.notification{
+    background-color: #ff0095;
+    border-radius: 50%;
+    padding: 4px 4px;
+    position: absolute;
+    top: -5px;
+    left: 70%;
+}
+
+.notification-badge{
+    background-color: #ff0095;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    padding: 4px 8px;
+    
+}
+
+.nav-link-wrap{
+    margin-right: 12rem;
+    
+}
+
+.form-control {
+    background: #212121;
+    padding: 10px; /* Assicurati che il padding sia coerente */
+    border: 1px solid #ff0095;
+    box-sizing: border-box; /* Questo evita che il bordo cambi le dimensioni */
+    font-family: 'Jersey 10';
+    font-size: 18px;
+}
+
+.form-control::placeholder {
+    color: white; 
+    font-family: 'Jersey 10';
+    font-size: 18px;
+    opacity: 0.5;
+    
+    
+    
+  }
+
+  .form-control:focus {
+    padding: 10px;
+    background-color: #212121; 
+    color: aliceblue;
+    font-family: 'Jersey 10';
+    font-size: 18px;
+    border: 2px solid #ff0095;
+    box-shadow: none;
+    
+
+  }
+
+  
+  .dropdown-menu{
+    background-color: #212121;
+    border: 2px solid #212121;
+    font-family: 'Jersey 10';
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+     margin-left: -20px;
+
+
+    
+  }
+
+ .dropdown-menu:hover{
+    border: 2px solid   #ff0095;
+    
+    font-family: 'Jersey 10';
+    font-size: 16px;
+ }
+
+
+@media screen and (max-width: 984px) {
+    .dropdown{
+        margin-left: 55px !important;
+    }
+
+    .nav-link-wrap {
+        display: flex;
+        flex-direction: column; /* Imposta la disposizione verticale */
+        align-items: center; /* Centra gli elementi */
+        width: 100%;
+    }
+
+    .navbar-nav {
+        justify-content: center; /* Centra gli elementi nella navbar */
+        text-align: center;
+    }
+
+    .nav-item {
+        width: 100%; /* Assicura che ogni voce occupi la larghezza disponibile */
+    }
+
+    .nav-link-wrap {
+        margin-left: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.appear{
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+/* Dropdown Language */
+
+.lang-dwn {
+    background-color: #212121 !important;
+    border: 2px solid #212121 !important;
+    color: #ff0095 !important;
+    font-family: 'Jersey 10';
+    font-size: 18px;
+    transition: all 0.4s ease-in-out; /* Transizione più fluida */
+}
+
+/* Effetto morbido sul bordo */
+.lang-dwn:hover {
+    background-color: #212121 !important;
+    border: 2px solid #ff0095 !important;
+    color: #ff0095 !important;
+    box-shadow: 0 0 8px #ff0095; /* Bordo sfumato */
+}
+
+.lang-dwn option {
+    background-color: #212121 !important;
+    color: #ff0095 !important;
+    font-family: 'Jersey 10';
+    font-size: 18px;
+}
+
+.lang-dwn:focus {
+    border: 2px solid #212121 !important;
+    box-shadow: 0 0 8px #ff0095; /* Bordo sfumato */
+}
+
+.navbar-toggler {
+    background-color: #212121; /* Cambia il colore del pulsante */
+    border: 2px solid #fff;
+    transition: all 0.3s ease-in-out; /* Transizione morbida */
+}
+.navbar-toggler:hover {
+    background-color: #ff0095; /* Cambia il colore del pulsante */
+     border: 2px solid #ff0095;
+}
+
+.navbar-toggler:focus {
+    background-color: #ff0095; /* Cambia il colore del pulsante */
+    
+    outline: none;
+    
+}
+
+.navbar-toggler[aria-expanded="true"] {
+    border: 2px solid #ff0095;
+     background-color: #ff0095;
+    box-shadow: 0 0 8px rgba(255, 0, 149, 0.6);
+}
+
+/* Rimuove il bordo e l'ombra quando il menu è chiuso */
+.navbar-toggler:not([aria-expanded="true"]) {
+    background-color: #212121;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+    .logo-title {
+        font-size: 2rem !important; /*  Riduce il titolo */
+    }
+
+    .logo {
+        max-width: 100px !important; /*  Logo più piccolo */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px !important; /*  Riduce la dimensione dei link */
+        padding: 5px 10px; /* Migliora la leggibilità */
+    }
+
+    .button-magenta,
+    .pink-btn {
+        font-size: 16px !important; /*  Bottoni più piccoli */
+        padding: 6px 12px !important;
+    }
+
+    .navbar-toggler {
+        padding: 8px !important;
+        font-size: 18px !important; /*  Rende il menu burger più piccolo */
+    }
+
+ 
+
+
+}
+
+
+
+/* Classe per attivare l'animazione */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.fade-dropdown {
+    animation: fadeIn 0.3s ease-in-out;
+}
+

@@ -1,0 +1,128 @@
+.message-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 300px;
+    background-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-color: #ff0095 #3f3a3d92;
+}
+
+.bot-message{
+    background-color: #ff0095;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.user-message{
+    background-color: #8fffd2;
+    color: #212121;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.bot-message a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.chat-bot{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: sticky;
+    bottom: 100px;
+    right: 25px;
+    z-index: 1000;
+    border:#ff0095;
+    box-shadow: #ff0095 0px 0px 10px 0px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.chat-bot:hover{
+    transform: scale(1.2);
+    
+}
+
+.chat-bot:hover::after {
+    opacity: 1;
+}
+
+.chat-bot::after {
+    content: '';
+    position: absolute;
+    bottom: 70px;
+    right: 80%;
+    transform: translateX(50%);
+    background: url('../../public/img/gamepad.png') center no-repeat #ff0095 ;
+    background-size: 20px;
+    color: white;
+
+    padding: 20px;
+    border-radius: 50%;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.chat-btn, .close-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.chat-btn:hover, .close-btn:hover{
+    color:#fff;
+}
+
+.chat-btn:active, .close-btn:active{
+    outline: none !important;
+    color:#fff;
+}
+
+.close-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.bot-message, .bot-message * {
+    font-family: 'Jersey 10', sans-serif !important;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message, .bot-message {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.close-btn {
+    z-index: 3000 !important;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.loading-animation span {
+    animation: blink 1.5s infinite;
+}
+
+.bot-message {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInBot 0.4s ease-out forwards;
+    animation-delay: 2.5s; 
+}
+
+@keyframes fadeInBot {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

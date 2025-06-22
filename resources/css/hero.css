@@ -1,0 +1,123 @@
+
+
+
+
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0%;
+   
+    
+}
+
+.hero-vid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0 ;
+} 
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 88%; */
+    z-index: 0;
+    
+}   
+
+.hero-info {
+    z-index: 1;
+    position: absolute;
+    bottom: 20vh; /* Sposta i testi in basso */
+    left: 10%;
+    
+}
+
+
+
+.hero-info h1 {
+    font-family: "Jersey 10", sans-serif;
+  
+    text-shadow: 
+    -2px -2px 0 black,  
+    2px -2px 0 black,  
+    -2px 2px 0 black,  
+    2px 2px 0 black;
+    font-size: 8rem;
+    font-weight: 700;
+    color: #da007f;
+    font-style: normal;
+    margin-top: 30px;
+    
+}
+
+
+.hero-info p {
+    font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  text-shadow: 
+  -2px -2px 0 black,  
+  2px -2px 0 black,  
+  -2px 2px 0 black,  
+  2px 2px 0 black;
+  font-style: normal;
+    font-size: 28px;
+    color: #fff;
+}
+
+
+/* 
+.gaming-text {
+    font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-style: normal;
+    position: absolute;
+    font-size: 60px;
+    margin: 0;
+    right:20px;
+    bottom: 30px;
+    text-shadow: 
+    -2px -2px 0 black,  
+    2px -2px 0 black,  
+    -2px 2px 0 black,  
+    2px 2px 0 black;
+} */
+
+.homecontainer{
+    position: relative;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero-info h1 {
+        font-size: 4rem; /* Dimensione ridotta per schermi più piccoli */
+    }
+
+    .hero-info p {
+        font-size: 20px; /* Riduzione della dimensione del sottotitolo */
+    }
+}
+
+
+.fade-in {
+    opacity: 0;
+    
+    animation: fadeInAnimation 4.2s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+        
+    }
+}

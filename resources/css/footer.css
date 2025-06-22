@@ -1,0 +1,28 @@
+
+
+footer {
+    border-top: 2px solid #ff0095;
+    background: #212121;;
+}
+
+
+
+ul li a {
+    text-decoration: none;
+}
+
+
+.fot-link {
+
+    font-size: 1rem;
+    color: #fff;
+    
+    
+    margin-left: 1rem;
+    transition: transform 4s ease-in; 
+}
+
+.fot-link:hover {
+    transform: scale(1.30) !important;
+    
+}

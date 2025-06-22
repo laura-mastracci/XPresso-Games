@@ -1,0 +1,22 @@
+.page-item.active > .page-link{
+    cursor: url("../../public/img/green-hand-cursor.png"), pointer;
+    background-color: #ff0095 !important;
+    color: #fff !important;
+}
+
+.page-item > .page-link:focus{
+    cursor: url("../../public/img/green-hand-cursor.png"), pointer;
+    border-color: #ff0095 !important;
+    box-shadow: none !important;
+}
+
+.page-item > .page-link{
+    cursor: url("../../public/img/green-hand-cursor.png"), pointer;
+    border:1px solid#ff0095 !important;
+    color: #ff0095 !important;
+    background-color: #212121 !important;
+}
+
+.paginate-text{
+    color: #fff !important;
+}

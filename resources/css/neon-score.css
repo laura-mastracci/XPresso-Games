@@ -1,0 +1,66 @@
+
+.neonscore {
+    
+    
+    font-family: inherit;
+    
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: color;
+  }
+  
+  .neonscore:focus,
+  .neonscore:hover {
+    transition-duration: 500ms;
+    
+    background: linear-gradient(0, rgb(255, 255, 255), #000 70%, #000 99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  .neonscore:focus:after,
+  .neonscore:hover:after {
+    width: 100%;
+    left: 0px;
+  }
+  
+  .neonscore:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 0px;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: #ff0095;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: width, left;
+  }
+  
+  .neonscore:focus:before,
+  .neonscore:hover:before {
+    width: 100%;
+    left: 0px;
+  }
+  
+  .neonscore:before {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 0px;
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: rgb(255, 1, 98);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: width, left;
+    filter: blur(5px);
+  }
+  
